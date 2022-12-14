@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
@@ -29,6 +28,7 @@
             </div>
         </div>
     </header>
+    
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -39,10 +39,10 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
-                            <form id="reserveForm">
-                                <div class="form-group row">
-                                    <label for="numCampers" class="col-sm col-form-label">Number of Campers</label>
-                                        <select name="numCampers" id="numCampers"class="form-control-sm col-sm-6">
+                            <div class="form-group row">
+                                <label for="numCampers" class="col-sm col-form-label">Number of Campers</label>
+                                <div class="col">
+                                        <select name="numCampers" id="numCampers"class="form-control">
                                             <option value="select">Select...</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -51,33 +51,40 @@
                                             <option value="5">5</option>
                                             <option value="6">6</option>
                                         </select>
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="date" class="col-sm col-form-label">Date</label>
-                                    <input type="date" id="date" placeholder="mm/dd/yyyy" class="form-control-sm col-sm-6" />      
+                                    <div class="col-sm-6">
+                                        <input type="date" id="date" placeholder="date" class="form-control">      
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="type" class="col-sm-6 col-form-label">Campsite Type</label>
                                     <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                       <label class="col-sm col-form-label btn btn-success">
-                                            <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked>Tent</label>
-                                        <label class="col-sm col-form-label btn btn-primary">
-                                            <input type="radio" name="siteType" id="siteRv" value="RV" autocomplete="off">RV</label>
+                                       <label class="col-sm col-form-label btn btn-success active">
+                                            <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked>Tent
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="siteType" id="siteRv" value="RV" autocomplete="off">RV
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col"><button type="cancel" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
-                                     <button type="submit" class="btn btn-primary">Search</button>
+                                    <div class="col">
+                                        <button type="cancel" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Search</button>
                                     </div>
                                 </div>
                             </form>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
@@ -98,6 +105,7 @@
           </div>
         </div>
     </nav>
+
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -135,6 +143,7 @@
             </div>
         </div>
     </div>
+    
     <div class="container">
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
@@ -177,65 +186,65 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-content align-items-center">
+        <div class="col-sm-4 order-sm-last col-md-3">
+            <h2 class="text-sm-right">Discover & Review</h2>
+        </div>
+        <div class="col">
+            <div class="media">
+                <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg"
+                    alt="Breadcrumb Trail thumbnail">
+                <div class="media-body align-self-center">
+                    <h3>Our Campsites</h3>
+                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
+                        own reviews!</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row row-content align-items-center">
+        
+    <div class="row row-content align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <h2>Featured Campsites</h2>
+        </div>
             <div class="col">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
                     <div class="media-body align-self-center">
-                        <h3>Our Campsites</h3>
-                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-                    </div>
-                    <div class="row row-content align-items-center">
-                        <div class="col">
-                        <h2 class="text-sm-right">Discover & Review</h2>
-                    </div>
-                </div>
+                        <h3>React Lake Campground</h3>
+                         <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                     </div>
+                        <img class="d-flex ml-3 img-thumbnail text-sm-right" src="img/react-lake-thumb.jpg" alt="React Lake Campground" />
+                </div>    
             </div>
-        
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
-                <h2>Featured Campsites</h2>
-            </div>
-                <div class="col">
-                    <div class="media">
-                        <div class="row row-content align-items-center">
-                            <h3>React Lake Campground</h3>
-                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                        </div>
-                            <img class="d-flex ml-3 img-thumbnail text-sm-right" src="img/react-lake-thumb.jpg" alt="React Lake Campground" />
-                    </div>    
-                </div>
         </div> 
+
         <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Our Community Partners</h2>
+            </div>
             <div class="col">
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
                     <div class="media-body align-self-center">
                         <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                    </div>
-                        <div class="row row-content align-items-center">
-                            <div class="col">
-                            <h2 class="text-sm-right">Our Community Partners</h2>
-                        </div>
-                    </div>
+                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                    </div>         
                 </div>
             </div>
         </div>
     </div>
-    </div>
-   </div>
-   
 
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-            <div class="col-4 col-sm-2">
+            <div class="col-4 col-sm-2 offset-1">
                 <h5>Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">Home</a></li>
@@ -263,7 +272,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    
+  <script src="js/scripts.js">  </script>
 
 </body>
 
